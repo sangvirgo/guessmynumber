@@ -54,6 +54,7 @@ document.querySelector('.check').addEventListener('click', function () {
         setBackgroundColor('#60b347');
         document.querySelector('.number').style.width='30rem';
         displayBodyMessage('YOU WIN🧨');
+        document.querySelector('.number').textContent=secretNumber;
 
         if (scoredisplay.textContent > highScore.textContent) {
             highScore.textContent = scoredisplay.textContent;
