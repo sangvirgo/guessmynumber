@@ -55,18 +55,15 @@ document.querySelector('.check').addEventListener('click', function () {
         document.querySelector('.number').style.width='30rem';
         displayBodyMessage('YOU WIN🧨');
 
-        if (scoredisplay.textContent >= highScore.textContent) {
+        if (scoredisplay.textContent > highScore.textContent) {
             highScore.textContent = scoredisplay.textContent;
-        
-            // Save the updated highScore to localStorage
-            if (scoredisplay.textContent == 20) {
-                displayBodyMessage("YOU ARE VERY LUCKY⭐");
-                highScore.textContent = 0;
-            }
-            localStorage.setItem('highscore', highScore.textContent);
         }
-        
-        
+        // Save the updated highScore to localStorage
+        if (scoredisplay.textContent == 20) {
+            displayBodyMessage("YOU ARE VERY LUCKY⭐");
+            highScore.textContent = 0;
+        }
+        localStorage.setItem('highscore', highScore.textContent);
 
     } else {
         if(scoredisplay.textContent>1) {
